@@ -1,0 +1,103 @@
+## dot plot 
+x<- c(5,34,2,5,3,2,47)
+plot(x)
+
+## scatter plot 
+x<- c(5,34,2,5,3,2,47)
+y<- c(3,56,3,75,243,874,1,3,51,72,4)
+plot(x,xlab = "x axis", ylab = " y axis" , main = "graph" , cex=2 , col= "red")=
+
+## histogram plot 
+x<- c(5,34,2,5,3,2,47)
+hist(x,xlab = "x axis", ylab = " y axis" , main = "graph" , cex=2 , col= "red",border = "pink")
+
+## pie plot 
+x<- c(5,34,2,5,3,2,47)
+pie(x,xlab = "x axis", ylab = " y axis" , main = "graph" , cex=.6 , col= "red",border = "pink")
+
+
+
+
+  
+  
+  ##uniform distribution 
+  set.seed(123)
+  uniform_data<-replicate(500,runif(20,min=2,max=3))
+  uniform_mean<-apply(uniform_data,2,mean)
+  uniform_sd<-apply(uniform_data,2,sd)
+  uniform_var<-apply(uniform_data,2,var)
+  mean(uniform_mean)
+  mean(uniform_sd)
+  mean(uniform_var)
+  hist(uniform_mean,probabilidy=TRUE,col="skyblue",main="uniform distribution",xlab = "mean" )
+  lines(density(uniform_mean),col="red",lwd=2)
+  
+  
+  ##exponential distribution 
+  set.seed(123)
+  exp_data<-replicate(500,rexp(20,rate=1/2))
+  exp_mean<-apply(exp_data,2,mean)
+  exp_sd<-apply(exp_data,2,sd)
+  exp_var<-apply(exp_data,2,var)
+  mean(exp_mean)
+  mean(exp_sd)
+  mean(exp_var)
+  hist(exp_mean,probabilidy=TRUE,col="skyblue",main="exponential distribution",xlab = "mean" )
+  lines(density(exp_mean),col="red",lwd=2)
+  
+  
+  ##shifted distribution 
+  set.seed(123)
+  exp_shift_data<-replicate(500,rexp(20,rate=1/2)+3)
+  exp_shift_mean<-apply(exp_shift_data,2,mean)
+  exp_shift_sd<-apply(exp_shift_data,2,sd)
+  exp_shift_var<-apply(exp_shift_data,2,var)
+  mean(exp_shift_mean)
+  mean(exp_shift_sd)
+  mean(exp_shift_var)
+  hist(exp_shift_mean,probabilidy=TRUE,col="lightcoral",main="shifted distribution",xlab = "mean" )
+  lines(density(exp_shift_mean),col="red",lwd=2)
+  
+  
+  
+  ##pareto distribution 
+  set.seed(123)
+  pareto_data<-replicate(500,rexp(20,rate=1/2))
+  pareto_mean<-apply(pareto_data,2,mean)
+  pareto_sd<-apply(pareto_data,2,sd)
+  pareto_var<-apply(pareto_data,2,var)
+  mean(pareto_mean)
+  mean(pareto_sd)
+  mean(pareto_var)
+  hist(pareto_mean,probabilidy=TRUE,col="skyblue",main="exponential distribution",xlab = "mean" )
+  lines(density(pareto_mean),col="red",lwd=2)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
